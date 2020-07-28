@@ -29,7 +29,6 @@ The forked messaging library have removed the hashmap and on notification tap, m
 - copy all from react-native-firebase/packages/messaging folder
 - copy .gitignore from react-native-firebase/.gitignore
 - copy devDependencies from react-native-firebaase root package.json
-- open android/build.gradle file and change ```apply from: file("./../../app/android/firebase-json.gradle")``` to ```apply from: file("./../../@react-native-firebase/app/android/firebase-json.gradle")```
 - modify android/src/main/java/io/invertase/firebase/messaging/ReactNativeFirebaseMessagingReceiver.java to remove hashmap
 - modify android/src/main/java/io/invertase/firebase/messaging/ReactNativeFirebaseMessagingModule.java to remove dependencies to hashmap
 

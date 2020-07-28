@@ -37,7 +37,7 @@ project.ext {
   ])
 }
 
-apply from: file("./../../@react-native-firebase/app/android/firebase-json.gradle")
+apply from: file("./../../app/android/firebase-json.gradle")
 
 def autoInitEnabled = "true"
 def notificationChannelId = ""
