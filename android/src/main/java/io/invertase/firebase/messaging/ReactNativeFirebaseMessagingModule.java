@@ -68,7 +68,7 @@ public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModul
 
           // only handle non-consumed initial notifications
           if (messageId != null && initialNotificationMap.get(messageId) == null) {
-            RemoteMessage remoteMessage = ReactNativeFirebaseMessagingReceiver.notifications.get(messageId);
+            RemoteMessage remoteMessage = new RemoteMessage(intent.getExtras());
 
             if (remoteMessage != null) {
               promise.resolve(ReactNativeFirebaseMessagingSerializer.remoteMessageToWritableMap(remoteMessage));
@@ -207,12 +207,11 @@ public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModul
       if (messageId == null) messageId = intent.getExtras().getString("message_id");
 
       if (messageId != null) {
-        RemoteMessage remoteMessage = ReactNativeFirebaseMessagingReceiver.notifications.get(messageId);
+        RemoteMessage remoteMessage = new RemoteMessage(intent.getExtras());
 
         if (remoteMessage != null) {
           initialNotification = remoteMessage;
-          ReactNativeFirebaseMessagingReceiver.notifications.remove(messageId);
-
+          
           ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
           emitter.sendEvent(ReactNativeFirebaseMessagingSerializer.remoteMessageToEvent(remoteMessage, true));
         }

@@ -16,8 +16,6 @@ import io.invertase.firebase.common.SharedUtils;
 
 public class ReactNativeFirebaseMessagingReceiver extends BroadcastReceiver {
   private static final String TAG = "RNFirebaseMsgReceiver";
-  static HashMap<String, RemoteMessage> notifications = new HashMap<>();
-
 
   @Override
   public void onReceive(Context context, Intent intent) {
@@ -38,11 +36,6 @@ public class ReactNativeFirebaseMessagingReceiver extends BroadcastReceiver {
     //  |-> ---------------------
     //    App in Background/Quit
     //   ------------------------
-
-    // Add a RemoteMessage if the message contains a notification payload
-    if (remoteMessage.getNotification() != null) {
-      notifications.put(remoteMessage.getMessageId(), remoteMessage);
-    }
 
     try {
       Intent backgroundIntent = new Intent(context, ReactNativeFirebaseMessagingHeadlessService.class);
