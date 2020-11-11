@@ -211,7 +211,7 @@ public class ReactNativeFirebaseMessagingModule extends ReactNativeFirebaseModul
 
         if (remoteMessage != null) {
           initialNotification = remoteMessage;
-          
+
           ReactNativeFirebaseEventEmitter emitter = ReactNativeFirebaseEventEmitter.getSharedInstance();
           emitter.sendEvent(ReactNativeFirebaseMessagingSerializer.remoteMessageToEvent(remoteMessage, true));
         }

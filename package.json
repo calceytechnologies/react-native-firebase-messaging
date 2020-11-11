@@ -1,6 +1,6 @@
 {
   "name": "@react-native-firebase/messaging",
-  "version": "6.7.1",
+  "version": "8.0.1",
   "author": "Invertase <oss@invertase.io> (http://invertase.io)",
   "description": "React Native Firebase - React Native Firebase provides native integration of Firebase Cloud Messaging (FCM) for both Android & iOS. FCM is a cost free service, allowing for server-device and device-device communication. The React Native Firebase Messaging module provides a simple JavaScript API to interact with FCM.",
   "main": "lib/index.js",
@@ -22,26 +22,32 @@
     "messaging"
   ],
   "peerDependencies": {
-    "@react-native-firebase/app": "*"
+    "@react-native-firebase/app": "9.0.0"
   },
   "devDependencies": {
-    "inquirer": "^7.1.0",
-    "shelljs": "^0.8.3",
-    "codecov": "^3.6.5",
-    "cross-env": "^7.0.2",
-    "genversion": "^2.2.0",
-    "lerna": "3.20.2",
-    "rimraf": "^3.0.2",
-    "typedoc": "^0.15.0",
-    "typescript": "^3.8.3",
+    "@babel/preset-env": "7.9.5",
+    "@babel/preset-flow": "7.9.0",
+    "@types/jest": "^25.2.1",
+    "@types/react": "^16.9.49",
     "@types/react-native": "^0.62.0",
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
+    "codecov": "^3.6.5",
+    "conventional-changelog-cli": "^2.0.34",
+    "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.19.0",
-    "prettier": "^1.19.1"
+    "genversion": "^2.2.0",
+    "inquirer": "^7.1.0",
+    "jest": "^25.5.1",
+    "lerna": "3.20.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.3",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
   },
   "publishConfig": {
     "access": "public"
